@@ -1,6 +1,6 @@
 # harborwave
 
-[![CI](https://github.com/<Abderrazzakelammari>/harborwave/actions/workflows/ci.yml/badge.svg)](https://github.com/<user>/harborwave/actions/workflows/ci.yml)
+[![CI](https://github.com/<abderrazzak-elammari>/harborwave/actions/workflows/ci.yml/badge.svg)](https://github.com/<abderrazzak-elammari>/harborwave/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -77,7 +77,7 @@ supérieur à 5 la réflexion parasite de la frontière ouverte à `kR = 4`.
 ## Installation
 
 ```bash
-git clone https://github.com/<Abderrazzakelammari>/harborwave
+git clone https://github.com/<abderrazzak-elammari>/harborwave
 cd harborwave
 pip install -e ".[dev]"
 pytest

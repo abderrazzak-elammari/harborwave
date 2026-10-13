@@ -28,7 +28,7 @@ dev = [
 ]
 
 [project.urls]
-Repository = "https://github.com/<user>/harborwave"
+Repository = "https://github.com/<abderrazzak-elammari>/harborwave"
 
 [tool.setuptools.packages.find]
 where = ["src"]
