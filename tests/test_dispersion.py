@@ -43,6 +43,7 @@ def test_group_speed_is_derivative_of_omega():
     numerical = (w(k + dk) - w(k - dk)) / (2 * dk)
     assert dispersion.group_speed(omega, depth) == pytest.approx(numerical, rel=1e-6)
 
+
 def test_wavelength_of_ten_second_wave():
     # Textbook value: T = 10 s in 10 m of water gives L ~ 92.3 m.
     assert dispersion.wavelength(10.0, 10.0) == pytest.approx(92.3, abs=0.2)

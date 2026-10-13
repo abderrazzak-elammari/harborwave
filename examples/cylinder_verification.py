@@ -80,7 +80,7 @@ def main():
         "o",
         ms=3,
         label="P1, h = 0.18",
-)
+    )
     ax.set_xlabel("angle from the lee side [deg]")
     ax.set_ylabel("run-up |eta| / A")
     ax.legend()
