@@ -24,7 +24,8 @@ class PlaneWave:
         return np.array([np.cos(self.angle), np.sin(self.angle)])
 
     def __call__(self, p: Points) -> NDArray[np.complex128]:
-        return self.amplitude * np.exp(1j * self.k * (p @ self.direction))
+        phase = self.k * (p @ self.direction)
+        return np.asarray(self.amplitude * np.exp(1j * phase), dtype=np.complex128)
 
     def gradient(self, p: Points) -> NDArray[np.complex128]:
         return 1j * self.k * self(p)[:, None] * self.direction[None, :]

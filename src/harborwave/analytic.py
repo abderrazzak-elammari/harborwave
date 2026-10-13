@@ -27,7 +27,7 @@ def maccamy_fuchs(
     if n_terms is None:
         n_terms = int(ka + 10 * ka ** (1 / 3) + 15)
 
-    eta = np.zeros(len(p), dtype=complex)
+    eta = np.zeros(len(p), dtype=np.complex128)
     for m in range(n_terms):
         eps = 1.0 if m == 0 else 2.0
         coef = jvp(m, ka) / h1vp(m, ka)

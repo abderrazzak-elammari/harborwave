@@ -8,7 +8,7 @@ from typing import TypeAlias
 
 import numpy as np
 import scipy.sparse as sp
-from numpy.typing import NDArray
+from numpy.typing import ArrayLike, NDArray
 from scipy.spatial import Delaunay
 
 Points: TypeAlias = NDArray[np.float64]
@@ -97,8 +97,8 @@ def rectangle(length: float, width: float, nx: int, ny: int) -> Mesh:
     x, y = np.meshgrid(np.linspace(0, length, nx + 1), np.linspace(0, width, ny + 1))
     nodes = np.column_stack([x.ravel(), y.ravel()])
 
-    i, j = np.meshgrid(np.arange(nx), np.arange(ny))
-    i, j = i.ravel(), j.ravel()
+    ii, jj = np.meshgrid(np.arange(nx), np.arange(ny))
+    i, j = ii.ravel(), jj.ravel()
     n00 = j * (nx + 1) + i
     n10, n01, n11 = n00 + 1, n00 + nx + 1, n00 + nx + 2
     flip = (i + j) % 2 == 0
@@ -121,8 +121,8 @@ def annulus(r_inner: float, r_outer: float, n_radial: int, n_angular: int) -> Me
     rr, tt = np.meshgrid(r, theta, indexing="ij")
     nodes = np.column_stack([(rr * np.cos(tt)).ravel(), (rr * np.sin(tt)).ravel()])
 
-    i, j = np.meshgrid(np.arange(n_radial), np.arange(n_angular), indexing="ij")
-    i, j = i.ravel(), j.ravel()
+    ii, jj = np.meshgrid(np.arange(n_radial), np.arange(n_angular), indexing="ij")
+    i, j = ii.ravel(), jj.ravel()
     jn = (j + 1) % n_angular
     n00 = i * n_angular + j
     n01 = i * n_angular + jn
@@ -191,7 +191,7 @@ def from_distance(
     return build(nodes[keep], renumber[cells], tag)
 
 
-def polyline_points(vertices: Points, h: float, closed: bool = False) -> Points:
+def polyline_points(vertices: ArrayLike, h: float, closed: bool = False) -> Points:
     """Sample a polyline at spacing close to h, keeping every vertex."""
     vertices = np.asarray(vertices, float)
     if closed:
