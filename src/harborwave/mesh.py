@@ -63,11 +63,12 @@ class Mesh:
 
 
 def signed_areas(nodes: Points, cells: NDArray[np.int64]) -> NDArray[np.float64]:
+
     p = nodes[cells]
-    return 0.5 * (
-        (p[:, 1, 0] - p[:, 0, 0]) * (p[:, 2, 1] - p[:, 0, 1])
-        - (p[:, 2, 0] - p[:, 0, 0]) * (p[:, 1, 1] - p[:, 0, 1])
-    )
+    twice_area = (p[:, 1, 0] - p[:, 0, 0]) * (p[:, 2, 1] - p[:, 0, 1]) - (
+        p[:, 2, 0] - p[:, 0, 0]
+    ) * (p[:, 1, 1] - p[:, 0, 1])
+    return np.asarray(0.5 * twice_area, dtype=np.float64)
 
 
 def _orient(nodes: Points, cells: NDArray[np.int64]) -> NDArray[np.int64]:
