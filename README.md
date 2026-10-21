@@ -146,7 +146,7 @@ app/                démo Streamlit
 - Théorie linéaire : pas de déferlement, pas d'interaction houle–courant, houle
   monochromatique uniquement. Un spectre se traite en superposant des solutions à plusieurs
   périodes et directions.
-- La condition de frontière ouverte est du premier ordre. Elle est précise pour `kR > 10` ;
+- La condition de frontière ouverte est du premier ordre. Elle est précise pour  $kR > 10$;
   pour les longues périodes où se situe le mode de Helmholtz (pompage) de ce bassin (vers
   220 s d'après l'estimation à constantes localisées), il faudrait un domaine de plusieurs
   kilomètres, ou remplacer la condition par une PML ou un opérateur DtN.
