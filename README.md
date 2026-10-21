@@ -24,18 +24,18 @@ $$
 \nabla \cdot \left( c c_g \nabla \eta \right) + k^2 c c_g \eta = 0
 $$
 
-pour l'amplitude complexe `eta` de la surface libre, avec
+pour l'amplitude complexe $\eta$ de la surface libre, avec
 
 - une frontière ouverte au large qui laisse sortir l'onde diffractée par le port
   (condition de Sommerfeld avec la correction de courbure de Bayliss–Turkel au premier
   ordre) ;
-- des parois partiellement réfléchissantes, `d eta/dn = i k alpha eta`, paramétrées par le
-  coefficient de réflexion `Kr` usuel de l'ouvrage (1 pour un mur vertical, 0,3 à 0,5 pour
+- des parois partiellement réfléchissantes, $\partial \eta / \partial n = i k \alpha \eta$, paramétrées par le
+  coefficient de réflexion $K_r$ usuel de l'ouvrage (1 pour un mur vertical, 0,3 à 0,5 pour
   un enrochement ou un quai absorbant) ;
 - une houle incidente écrite comme onde plane plus son image sur la côte, de sorte que seule
   la contribution du port a besoin de satisfaire la condition de rayonnement.
 
-La sortie est le coefficient d'agitation `|eta| / A`, la grandeur qu'un ingénieur côtier
+La sortie est le coefficient d'agitation $|\eta| / A$, la grandeur qu'un ingénieur côtier
 utilise pour décider si un poste à quai est exploitable.
 
 ## Résultats
@@ -56,7 +56,7 @@ Balayage de la période de houle de 7 à 60 s (150 résolutions, 31 000 degrés 
 
 En profondeur constante, l'équation de pente douce se réduit à l'équation de Helmholtz, et
 la diffraction d'une onde plane par un cylindre vertical a une solution analytique
-(MacCamy et Fuchs, 1954). Avec `ka = 2` et la frontière ouverte à `kR = 16` :
+(MacCamy et Fuchs, 1954). Avec $ka = 2$ et la frontière ouverte à $kR = 16$ :
 
 | n_radial | DDL | h | erreur L2 relative |
 |---:|---:|---:|---:|
