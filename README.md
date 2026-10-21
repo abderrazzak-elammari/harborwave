@@ -21,7 +21,7 @@ de 1,59 à 0,49.
 code résout l'équation de pente douce de Berkhoff
 
 $$
-\nabla \cdot \left( c\, c_g \nabla \eta \right) + k^2\, c\, c_g\, \eta = 0
+\nabla \cdot \left( c c_g \nabla \eta \right) + k^2 c c_g \eta = 0
 $$
 
 pour l'amplitude complexe `eta` de la surface libre, avec
