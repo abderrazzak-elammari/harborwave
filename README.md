@@ -20,9 +20,9 @@ de 1,59 à 0,49.
 À partir d'une bathymétrie, d'un plan de port et d'une houle monochromatique incidente, le
 code résout l'équation de pente douce de Berkhoff
 
-```
-div(c cg grad eta) + k^2 c cg eta = 0
-```
+$$
+\nabla \cdot \left( c\, c_g \nabla \eta \right) + k^2\, c\, c_g\, \eta = 0
+$$
 
 pour l'amplitude complexe `eta` de la surface libre, avec
 
